@@ -32,4 +32,30 @@ const { Triangle } = require('./lib/Triangle.js');
           name: 'shapeColor',
         },
       ])
-      
+      .then((response) => {
+        if (response.shape === 'Square') {
+            const square = new Square(response.characters, response.shapeColor, response.textColor)
+            fs.writeFile('./tests/Square.svg', square.render(), (error) => {
+                if (error) {
+                    console.error(error);
+                }
+            });
+        } else if (response.shape === 'Circle') {
+            const circle = new Circle(response.characters, response.shapeColor, response.textColor)
+            fs.writeFile('./tests/Circle.svg', circle.render(), (error) => {
+                if (error) {
+                    console.error(error);
+                }
+            })
+        } else if (response.shape === 'Circle') {
+            const triangle = new Triangle(response.characters, response.shapeColor, response.textColor)
+            fs.writeFile('./tests/Triangle.svg', triangle.render(), (error) => {
+                if (error) {
+                    console.error(error);
+                }
+            })
+        }
+    })
+    .then(() => {
+        return console.log("Generated logo.svg")
+    })
