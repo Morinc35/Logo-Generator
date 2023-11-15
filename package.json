@@ -1,0 +1,29 @@
+{
+  "name": "logo-generator",
+  "version": "1.0.0",
+  "description": "Basic Logo Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:detect-handles": "jest --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morinc35/"
+  },
+  "author": "morinc35",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morinc35/"
+  },
+  "homepage": "https://github.com/morinc35/",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.6",
+    "jest": "^29.7.0"
+  }
+}
