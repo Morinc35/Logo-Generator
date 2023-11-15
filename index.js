@@ -47,7 +47,7 @@ const { Triangle } = require('./lib/Triangle.js');
                     console.error(error);
                 }
             })
-        } else if (response.shape === 'Circle') {
+        } else if (response.shape === 'Triangle') {
             const triangle = new Triangle(response.characters, response.shapeColor, response.textColor)
             fs.writeFile('./tests/Triangle.svg', triangle.render(), (error) => {
                 if (error) {
